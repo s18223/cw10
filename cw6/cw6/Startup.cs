@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using cw10.Services;
 using cw4.DAL;
 using cw6.Middlewares;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,10 @@ namespace cw4
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IDbService, MockDbService>();
+            services.AddDbContext<StudentContext>(options =>
+            {
+                options.UseSqlServer("Data Source=db-mssql;Initial Catalog=pgago3;Integrated Security=True");
+            });
             services.AddControllers();
         }
 

@@ -12,6 +12,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'cw5' ">
     <StartAction>Project</StartAction>
+    <ExternalConsole>true</ExternalConsole>
     <ApplicationURL>http://localhost:47582</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
@@ -29,5 +30,7 @@
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
     <PackageReference Include="MySql.Data" Version="8.0.20" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
   </ItemGroup>
 </Project>
